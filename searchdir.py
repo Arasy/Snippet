@@ -21,7 +21,7 @@ f.close()
 
 #csv
 with open("index.csv","w") as csvfile:
-    wr = csv.writer(csvfile,quoting=QUOTE_ALL)
-    wr.writerow(data)
+    wr = csv.writer(csvfile)
+    wr.writerows(data)
 
 print('Finished!')
