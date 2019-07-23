@@ -9,7 +9,7 @@ def crawldir(rootdir):
         for file in f:
             try:
                 data.append([r,file,str(os.path.getsize(os.path.join(r,file)))])
-            except FileNotFoundError:
+            except Exception :
                 data.append((r,file,'unk'))
     return data
 
