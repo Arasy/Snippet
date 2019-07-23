@@ -1,7 +1,11 @@
 import os
 import csv
+import sys
 
 rootdir = os.getcwd()
+
+if sys.argv[1]:
+    rootdir = sys.argv[1]
 
 print('Searching...')
 data = []
@@ -13,14 +17,14 @@ for r,d,f in os.walk(rootdir):
             data.append((r,file,'unk'))
 
 print('Saving to file...')
-f = open('index.txt','w')
+f = open('index.txt','w',encoding='utf-8')
 for i in data:
     f.write('\t'.join(i))
     f.write('\n')
 f.close()
 
 #csv
-with open("index.csv","w") as csvfile:
+with open("index.csv","w",encoding="utf-8") as csvfile:
     wr = csv.writer(csvfile)
     wr.writerows(data)
 
