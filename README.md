@@ -3,6 +3,9 @@ small piece of code
 
 Ini beberapa kode python kecil yang saya buat yang bukan bagian dari project. Masing masing punya task spesifik yang bisa dimanfaatkan. Kayaknya sih ada yang lebih optimal, tapi nulis kode seperti ini juga jadi bagian dari latihan saya menuangkan ide ke kode.
 
+### Metadata
+file untuk menggenerate metadata file training dalam praktikum audio processing NLP. Data audio disimpan dalam folder tertentu, file akan memeriksa seluruh isi folder tersebut dan menggenerate informasi dari wavfilenya.
+
 ### Scrapvid
 memanfaatkan urllib2, pytube, dan beautifulsoup untuk mendownload video berdasarkan playlistnya.
 
