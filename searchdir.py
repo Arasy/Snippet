@@ -28,10 +28,7 @@ def crawldir(rootdir):
     return data
 
 def savefile(data):
-    print('Saving to file...')
     name = 'index'
-#    if sys.argv[2]:
-#        name = 'index'+sys.argv[2]
 
     f = open(name+'.txt','w',encoding='utf-8')
     for i in data:
@@ -39,21 +36,14 @@ def savefile(data):
         f.write('\n')
     f.close()
 
-#    #csv
-#    with open(name+".csv","w",encoding="utf-8") as csvfile:
-#        wr = csv.writer(csvfile)
-#        wr.writerows(data)
 
 if __name__ == "__main__":
     rootdir = os.getcwd()
 
-#    if sys.argv[1]:
-#        rootdir = sys.argv[1]
-
     data = crawldir(rootdir)
 
+    print('Saving to file...')
     df = pd.DataFrame(data)
     df.to_csv("index.csv")
 
-#    savefile(data)
     print('Finished!')
