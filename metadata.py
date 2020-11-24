@@ -27,12 +27,12 @@ for i in listfile:
         print("file %s error %s" % (i,e))
         error.append([i,e])
 #masukkan ke file csv
-with open(namafile,'w') as csvfile:
+with open(namafile,'w', newline='') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerows(data)
 print("saved as %s" % namafile)
 if error:
-    with open("error.csv","w") as csvfile:
+    with open("error.csv","w", newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerows(error)
     print("error saved as error.csv")
